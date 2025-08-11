@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Ayra 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="card" id="appCard">
+      <!-- OPENING / HERO -->
+      <div class="hero">
+        <div class="photo" id="mainPhoto">
+          <img src="photo1.png" alt="Ayra photo">
+        </div>
+        <div class="hero-text">
+          <h1>Hey Ayra… I made you a little birthday surprise</h1>
+          <p>Tap Play to start the music, then press Start Game.</p>
+        </div>
+        <div class="controls">
+          <button class="btn" id="playMusicBtn" aria-label="Play music">▶ Play Music</button>
+          <button class="btn secondary" id="startBtn" aria-label="Start game">Start Game</button>
+        </div>
+      </div>
+
+      <!-- STAGE -->
+      <div class="stage">
+        <!-- Welcome -->
+        <div class="welcome" id="welcomeScreen">
+          <h2>Ready for a tiny birthday game?</h2>
+          <p>Answer a few silly questions and get a surprise at the end.</p>
+        </div>
+
+        <!-- QUESTION AREA -->
+        <div class="question-wrap" id="questionArea" style="display:none">
+          <div class="question" id="questionText">Question text</div>
+          <div class="options" id="optionsGrid"></div>
+          <div id="noteArea"></div>
+          <div class="next-area" id="nextArea" style="display:none">
+            <button class="btn" id="nextBtn">Next</button>
+          </div>
+        </div>
+
+        <!-- FINAL SCREEN -->
+        <div class="final" id="finalScreen" style="display:none">
+          <h2 id="finalTitle">Happy Birthday, Ayra</h2>
+
+          <!-- Slideshow -->
+          <div class="slideshow" id="slideshow">
+            <img src="photo1.png" id="slideImg" alt="Ayra slide">
+          </div>
+
+          <div id="finalNote" class="final-note"></div>
+          <div style="margin-top:18px">
+            <button class="btn" id="replay">Replay Game</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating yellow hearts layer -->
+      <div class="hearts" id="heartsLayer" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Audio (rename your file to With-You.mp3 and place here) -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="With-You.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
